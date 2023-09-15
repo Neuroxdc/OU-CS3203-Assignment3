@@ -6,3 +6,14 @@ public static int arraySum(int[] array) {
     }
     
     return sum;
+}
+
+public static int arrayProduct(int[] array) {
+	    
+    int product = 1;
+    for (int i = 0; i < array.length; i++) {
+        product *= array[i];
+    }
+    
+    return product;
+}
