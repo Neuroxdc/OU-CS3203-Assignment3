@@ -20,6 +20,17 @@ public static int arrayProduct(int[] array) {
     return product;
 }
 
+public static int[] arrayReversed(int[] array) {
+    int n = array.length;
+    int[] arrayReversed = new int[n];
+    
+    for (int i = 0; i < n; i++) {
+        arrayReversed[i] = array[n - i - 1];
+    }
+    
+    return arrayReversed;
+}
+
 public static void main(String args[]) {
 	    
     Scanner scanner = new Scanner(System.in);
@@ -35,9 +46,15 @@ public static void main(String args[]) {
     
     int totalSum = arraySum(array);
     int totalProduct = arrayProduct(array);
+    int[] arrayReversed = arrayReversed(array);
     
     System.out.println("The sum of the array is :" + totalSum);
     System.out.println("The product of the array is:" + totalProduct);
+    System.out.print("The order of the array in reverse is: ");
+
+	for (int i = 0; i < arrayReversed.length; i++) {
+	    System.out.print(arrayReversed[i] + " ");
+	}
 
     scanner.close();
 }
